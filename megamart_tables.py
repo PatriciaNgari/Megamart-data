@@ -23,7 +23,7 @@ try:
         
         f = open(r'C:\Users\User\Downloads\product.csv')
         
-        conn.copy_from(f, 'transaction_data', sep=";", null="")
+        conn.copy_from(f, 'salesperson', sep=";", null="")
         cur.commit() 
     
         print("Engine valid")
