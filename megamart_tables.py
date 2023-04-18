@@ -20,8 +20,9 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""CREATE TABLE product (product_category_id VARCHAR(20),
-                     product_cat_name VARCHAR(100))
+        conn.execute("""CREATE TABLE salesperson (product_category_id VARCHAR(20),
+                     sales_person_id VARCHAR(100))
+        
                      
                      
                      """)
