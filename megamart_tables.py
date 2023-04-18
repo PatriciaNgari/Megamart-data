@@ -20,13 +20,11 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""CREATE TABLE transaction_data (date TIMESTAMP, customer_id INTEGER, transaction_id INTEGER,
-                     product_category_id VARCHAR(20), SKU VARCHAR(40),
-                     quantity INTEGER, sales_amount FLOAT)
         
-                     
-                     
-                     """)
+        f = open(r'C:\Users\User\Downloads\product.csv')
+        
+        conn.copy_from(f, 'transaction_data', sep=";", null="")
+        cur.commit() 
     
         print("Engine valid")
 except Exception as e:
