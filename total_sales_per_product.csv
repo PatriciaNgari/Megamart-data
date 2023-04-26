@@ -1,0 +1,188 @@
+product_category_id,product_cat_name,sales_person_id,qty_sold,revenue
+N8U,Lawn & Gardening,Eli Kavanagh,10913,49119.54999999993
+R6E,Outdoor & Adventure,Marnie Estrada,5099,34784.58999999986
+LPF,Infant Wear,Nayan Naylor,5062,84921.91000000013
+P42,Men's Grooming,Kaan Leon,4836,32009.439999999937
+U5F,Raees Wayfarer Sunglasses,Marnie Estrada,4570,28230.64999999999
+0H2,Women's Hygiene,Tarun Goodwin,4500,29875.140000000367
+IEV,Hardware,Deborah Eaton,4305,37618.21999999987
+FEW,Eye Care,Asad Rayner,3164,32919.58000000005
+29A,Camera Accessories,Alan Farley,3033,22307.120000000035
+H15,Gaming Components,Deborah Eaton,3011,21928.260000000064
+Q4N,Network Components,Kaan Leon,2858,31928.339999999924
+OXH,Men's Clothing,Kaan Leon,2833,54470.159999999676
+FU5,Feeding & Nursing,Asad Rayner,2775,25877.710000000072
+8HU,Beauty Accessories,Alan Farley,2598,35528.14000000014
+J4R,Health Care,Nayan Naylor,2306,28916.230000000058
+01F,Body and Skin Care,Alan Farley,2158,38029.87000000003
+XG4,Science,Wade Rowley,1995,14422.89000000001
+TW8,Pressure Cookers & Pans,Marnie Estrada,1913,4003.80999999998
+6BZ,"Bangles, Bracelets & Armlets",Alan Farley,1910,114061.33000000037
+SJS,Track & Field,Marnie Estrada,1899,85142.31
+1VL,Anklets,Tarun Goodwin,1868,16931.529999999948
+JPI,Tableware & Cutlery,Nayan Naylor,1863,4933.950000000009
+X52,Storage,Wade Rowley,1852,12769.069999999978
+QCG,Nose Rings & Studs,Kaan Leon,1811,19855.560000000012
+2ML,Baby & Kids Gifts,Tarun Goodwin,1724,11220.749999999989
+LSD,Kids Room Furniture,Eli Kavanagh,1690,16732.680000000022
+C8Z,Curtains & Accessories,Asad Rayner,1528,18542.55999999999
+A38,Women's Footwear,Cassius David,1516,19179.26000000001
+9ZX,Belts,Alan Farley,1482,42629.309999999925
+OBD,Wall Decor & Clocks,Kaan Leon,1472,20847.280000000002
+YMJ,Showpieces,Wade Rowley,1406,14725.429999999958
+SFC,Pendants & Lockets,Marnie Estrada,1381,3532.7799999999866
+TZB,Puzzles & Board Games,Marnie Estrada,1241,10397.699999999975
+EKM,Dupli Color Toys & School Supplies,Asad Rayner,1160,11767.140000000018
+1EO,Accessories,Tarun Goodwin,1120,34638.22000000002
+MOE,Kitchen Tools,Eli Kavanagh,996,4340.129999999996
+N5F,Laptops,Eli Kavanagh,981,9133.180000000024
+FZT,Floor Coverings,Deborah Eaton,945,4581.899999999996
+69K,TRUE Home Decor & Festive Needs,Cassius David,841,9557.560000000016
+NTA,Lighting,Eli Kavanagh,779,5916.7099999999955
+H8O,Gaming Accessories,Deborah Eaton,768,3341.189999999995
+JKC,Tablet Accessories,Nayan Naylor,754,3172.0499999999874
+ILF,Health & Nutrition,Deborah Eaton,748,15763.41999999994
+PZW,Necklaces & Chains,Kaan Leon,745,4721.7500000000055
+1TS,Aligatorr Aviator Sunglasses,Tarun Goodwin,730,10835.82999999999
+LDZ,Home Utilities,Nayan Naylor,729,25150.59999999997
+Z4O,Storage & Feeding Utensils,Wade Rowley,708,4925.059999999998
+OQA,Luggage & Travel,Kaan Leon,675,11645.399999999934
+BZU,Containers & Bottles,Asad Rayner,675,5130.880000000007
+0WT,Academic Texts,Tarun Goodwin,673,4052.490000000007
+DJI,Diaries & Notebooks,Asad Rayner,649,13659.369999999999
+1L6,Accessories & Spare parts,Tarun Goodwin,630,14953.719999999994
+Z23,Smart Door Locks,Wade Rowley,606,4507.430000000002
+LGI,Housekeeping & Laundry,Nayan Naylor,578,4178.319999999993
+V9H,Religion & Spirituality,Marnie Estrada,575,19960.929999999986
+QLB,Office Supplies,Kaan Leon,566,5484.4000000000015
+JB0,HERDY Aviator Sunglasses,Nayan Naylor,558,16592.980000000003
+TVL,Precious Jewellery,Marnie Estrada,547,3306.7399999999934
+PA3,Mikado Aviator Sunglasses,Kaan Leon,546,12843.35999999998
+HVP,General Utility Furniture,Deborah Eaton,537,5007.679999999991
+QV7,Olvin Wayfarer Sunglasses,Marnie Estrada,521,3488.5499999999997
+M7X,Kids' Clothing,Eli Kavanagh,519,15298.179999999966
+AEB,Clocks,Cassius David,506,2171.2400000000025
+RML,Outdoor Toys,Marnie Estrada,497,5764.910000000002
+VQD,Strollers & Activity Gear,Wade Rowley,483,3294.1399999999917
+EMC,Earrings,Asad Rayner,465,4212.389999999994
+0KX,Wrist Watches,Tarun Goodwin,460,2044.449999999998
+O38,Living Room Furniture,Kaan Leon,459,1297.3100000000004
+7C6,Bar Furniture,Alan Farley,457,7402.839999999998
+MU3,Laptop Accessories,Eli Kavanagh,447,2206.640000000002
+DMA,Wallets & Clutches,Asad Rayner,439,7756.439999999998
+2O0,Baby Bath & Skin,Tarun Goodwin,418,4942.340000000002
+3WV,Baby Grooming,Tarun Goodwin,393,3050.580000000001
+RU6,Palakz Kitchen & Dining,Marnie Estrada,393,8358.180000000004
+F9B,Electricals,Asad Rayner,393,5011.180000000002
+T80,Pet Apparel,Marnie Estrada,383,2359.249999999998
+JI5,Table Decor & Handicrafts,Nayan Naylor,383,4376.76
+DGB,Diapering & Potty Training,Asad Rayner,381,9498.119999999995
+PBV,Mobile Accessories,Kaan Leon,367,10236.330000000005
+FDS,Elligator Aviator Sunglasses,Asad Rayner,348,3789.029999999999
+H1H,Fragrances,Deborah Eaton,335,2181.7
+B93,Computer Components,Cassius David,334,3980.499999999998
+BR0,Consumables & Disposables,Asad Rayner,331,7527.42
+SIM,Pens,Marnie Estrada,328,9361.230000000003
+GGP,"Flowers, Plants & Vases",Deborah Eaton,286,2499.5599999999995
+D6J,Decorative Lighting & Lamps,Asad Rayner,285,16559.189999999988
+XAE,School Supplies,Wade Rowley,284,2570.069999999995
+L9F,Home Cleaning,Nayan Naylor,281,3360.989999999998
+8H8,Bath Linen,Alan Farley,279,1144.3699999999972
+I4Y,Hair Care,Deborah Eaton,275,2530.4599999999973
+BEQ,Computer Peripherals,Cassius David,265,1982.1099999999997
+JR5,Home Appliances,Nayan Naylor,239,1582.6100000000006
+MTR,Kripa's Home Furnishing,Eli Kavanagh,223,1322.4300000000003
+LIB,Indoor Sports & Games,Nayan Naylor,213,2469.8199999999993
+4Y8,Bags,Alan Farley,213,3306.89
+OWA,Mangalsutras & Tanmaniyas,Kaan Leon,212,2316.630000000001
+2LA,Audio Players,Tarun Goodwin,211,1137.4699999999998
+PHK,MP3 players/Ipods Accessories,Kaan Leon,210,12448.959999999995
+06Z,C Kreul Toys & School Supplies,Alan Farley,209,8619.169999999993
+FWN,Fitness Accessories,Deborah Eaton,204,5819.409999999993
+XVK,Seating,Wade Rowley,196,2089.9000000000005
+FUA,Festive Decor,Asad Rayner,195,1566.9899999999993
+C3Y,Cufflinks,Asad Rayner,187,4284.8099999999995
+HTR,Garment Covers,Deborah Eaton,185,9718.239999999998
+56W,Car & Bike Accessories,Alan Farley,171,557.7100000000004
+EPM,Educational Toys,Asad Rayner,170,693.2700000000001
+TEU,Pet Furniture,Marnie Estrada,170,1270.0199999999995
+R6B,Other Sports,Marnie Estrada,169,1693.7100000000012
+NY7,Living Room Furnishing,Eli Kavanagh,162,2203.9699999999984
+GVG,fourgee Clothing,Deborah Eaton,161,3897.4399999999996
+A0G,Women's Clothing,Cassius David,149,963.83
+61C,Car Accessories,Cassius David,140,7121.1299999999965
+ZX5,Sonpra Clothing,Wade Rowley,139,954.63
+ZYU,Storage Furniture,Wade Rowley,131,1749.9100000000003
+69B,"Cars, Trains & Bikes",Cassius David,118,2752.180000000002
+L28,Home Storage & Organization,Nayan Naylor,114,1070.21
+C3R,Cookware,Asad Rayner,110,2168.9200000000005
+TIF,piftif Clothing,Marnie Estrada,108,895.9099999999999
+CQK,Damemoda Wayfarer Sunglasses,Asad Rayner,107,943.2999999999997
+52T,Candles & Fragrances,Alan Farley,106,2086.59
+4ZE,Bakeware,Alan Farley,101,74.09999999999995
+W41,Rings,Wade Rowley,100,566.58
+SKG,Personal Care Appliances,Marnie Estrada,97,1128.1
+WHL,Role Play Toys,Wade Rowley,94,858.3900000000003
+8LP,Bedroom Furniture,Alan Farley,91,2112.2899999999995
+XX1,Seating Furniture,Wade Rowley,90,691.2899999999997
+NX3,Living Room,Eli Kavanagh,85,944.9100000000001
+FYD,Flasks & Casseroles,Deborah Eaton,81,2879.04
+LRU,JMD Home Furnishing,Eli Kavanagh,80,700.0000000000002
+MEL,Kitchen & Dining Linen,Eli Kavanagh,74,323.5400000000001
+NVL,Living,Eli Kavanagh,74,2404.9800000000005
+HXR,Habitat,Deborah Eaton,71,125.19
+FQC,EYE GLASS Wayfarer Sunglasses,Asad Rayner,65,860.2600000000001
+I3L,Hair Accessories,Deborah Eaton,62,1501.67
+PKN,Musical Instruments & Toys,Kaan Leon,60,941.2799999999997
+B2B,College Supplies,Cassius David,54,225.68
+HW0,Grooming,Deborah Eaton,53,350.1500000000001
+10Y,Calculators,Alan Farley,52,2982.030000000001
+HJ3,Garden & Leisure,Deborah Eaton,51,432.37999999999994
+VW7,Ride Ons,Wade Rowley,50,1268.8099999999997
+Z99,Soft Toys,Wade Rowley,48,1969.85
+PW7,Naaz Toys & School Supplies,Kaan Leon,48,1219.04
+ARZ,Coffee Mugs,Cassius David,47,379.94000000000005
+IW1,Health & Safety,,46,414.6299999999999
+596,Wearable Accessories,Cassius David,43,1087.6100000000001
+2K4,Artificial Jewellery,Tarun Goodwin,42,338.39999999999986
+GSI,Food & Health Supplies,Deborah Eaton,39,339.70000000000005
+OXO,Men's Footwear,Kaan Leon,32,304.71000000000004
+70H,Tuelip Toys & School Supplies,Cassius David,32,69.23
+XZC,Showpiece,Wade Rowley,30,429.8499999999999
+ZJG,Software,Wade Rowley,28,754.01
+6KO,Bar & Glassware,Alan Farley,28,200.45
+LRR,Jewellery Sets,Nayan Naylor,27,787.1900000000002
+84J,VESPL Wayfarer Sunglasses,Cassius David,26,643.73
+144,Video Players & Accessories,Cassius David,26,148.83999999999997
+MG8,Kitchen Appliances,Eli Kavanagh,25,528.6599999999999
+QOR,Olvin Oval Sunglasses,Kaan Leon,24,62.68000000000001
+8AK,Bath and Spa,Alan Farley,23,263.53
+CGS,"Cushions, Pillows & Covers",Asad Rayner,23,142.49
+LWD,Kids' & Infant Footwear,Eli Kavanagh,23,344.88
+UCR,Redex Cat-eye Sunglasses,Marnie Estrada,22,59.97
+AQO,Clovia Clothing,Cassius David,22,569.3699999999999
+B7G,Combos and Kits,Cassius David,20,100.49
+206,Watch Accessories,Cassius David,20,306.62
+1R3,Action Figures,Tarun Goodwin,18,162.33999999999997
+RF5,Outdoor & Cafeteria Furniture,Marnie Estrada,14,877.3700000000001
+QFK,Office Equipments,Kaan Leon,14,49.21999999999999
+S30,Party Supplies,Marnie Estrada,14,2082.51
+UZI,Religion & Devotion,Marnie Estrada,12,173.82999999999998
+3MC,Baby Bedding,Tarun Goodwin,12,1883.6100000000001
+H8J,Furniture & Furnishings,Deborah Eaton,10,22.96
+8IW,Bed Linen,Alan Farley,10,1169.73
+VD0,Remote Control Toys,Wade Rowley,9,1285.23
+WWM,Sanitaryware,Wade Rowley,9,7.329999999999999
+663,Wind Spinner Toys,Cassius David,8,1033.77
+KN1,Home Audio,Nayan Naylor,7,281.65999999999997
+DVQ,Dinnerware & Crockery,Asad Rayner,5,112.66000000000001
+ORW,Magic Kits,Kaan Leon,5,69.9
+NLS,Learning & Educational Toys,Eli Kavanagh,4,39.42
+D5F,Dark Image Wayfarer Sunglasses,Asad Rayner,4,96.9
+M8H,Kitchen & Dining Furniture,Eli Kavanagh,3,7.159999999999999
+H4E,Frames,Deborah Eaton,3,35.28
+7MA,Toy Guns & Weapons,Alan Farley,3,35.37
+U3N,Racquet Sports,Marnie Estrada,2,46.66
+OTK,Makeup,Kaan Leon,1,71.75
+QON,Olvin Aviator Sunglasses,Kaan Leon,1,12.75
+2JO,Art Supplies,Tarun Goodwin,1,120.6

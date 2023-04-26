@@ -37,11 +37,12 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT sales_person_id, sum(sales_amount)
-                        FROM salesperson
-                        JOIN transaction_data td on salesperson.product_category_id = td.product_category_id
-                        GROUP BY sales_person_id
-                        ORDER BY sum(sales_amount) DESC""")
+        conn.execute("""SELECT p.product_category_id, p.product_cat_name, s.sales_person_id, COUNT(quantity) AS qty_sold, sum(sales_amount) AS revenue
+                        FROM transaction_data
+                        JOIN product p on transaction_data.product_category_id = p.product_category_id
+                        JOIN salesperson s on transaction_data.product_category_id = s.product_category_id
+                        GROUP BY p.product_category_id, product_cat_name, sales_person_id
+                        order by count(quantity)desc""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -49,15 +50,15 @@ try:
         listOfTransactions = []
         
         # 1. Open a new CSV file
-        with open('sales_amount_per_person.csv', 'w', newline='') as file:
+        with open('total_sales_per_product.csv', 'w', newline='') as file:
         # 2. Create a CSV writer
          writer = csv.writer(file)
         # 3. Write data to the file
         
-         sales_amount_per_person_header = ['sales_person_id', 'sum(sales_amount)']
-         writer.writerow(sales_amount_per_person_header)
+         total_sales_per_product_header = ['product_category_id', 'product_cat_name', 'sales_person_id', 'qty_sold', 'revenue']
+         writer.writerow(total_sales_per_product_header)
          for row in records:
-            writer.writerow([row[0], row[1]])
+            writer.writerow([row[0], row[1], row[2], row[3], row[4]])
 
                              
         print("Engine valid")
