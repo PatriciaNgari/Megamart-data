@@ -37,11 +37,11 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT product_cat_name, sum(sales_amount)
-                        FROM transaction_data
-                        JOIN product p on transaction_data.product_category_id = p.product_category_id
-                        GROUP BY product_cat_name
-                        ORDER BY sum(sales_amount)DESC""")
+        conn.execute("""SELECT sales_person_id, sum(sales_amount)
+                        FROM salesperson
+                        JOIN transaction_data td on salesperson.product_category_id = td.product_category_id
+                        GROUP BY sales_person_id
+                        ORDER BY sum(sales_amount) DESC""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -49,13 +49,13 @@ try:
         listOfTransactions = []
         
         # 1. Open a new CSV file
-        with open('sales_per_product.csv', 'w', newline='') as file:
+        with open('sales_amount_per_person.csv', 'w', newline='') as file:
         # 2. Create a CSV writer
          writer = csv.writer(file)
         # 3. Write data to the file
         
-         sales_per_product_header = ['product_cat_name', 'sum(sales_amount)']
-         writer.writerow(sales_per_product_header)
+         sales_amount_per_person_header = ['sales_person_id', 'sum(sales_amount)']
+         writer.writerow(sales_amount_per_person_header)
          for row in records:
             writer.writerow([row[0], row[1]])
 
