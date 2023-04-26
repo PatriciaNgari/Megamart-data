@@ -4,14 +4,19 @@ from io import open
 import pandas as pd
 
 class Transaction:
-  def __init__(self , productCategoryId, salesPersonId ):
+  def __init__(self , date, customerId, transactionId, productCategoryId, SKU, quantity, salesAmount ):
+    self.date = date
+    self.customerId = customerId
+    self.transactionId = transactionId
     self.productCategoryId = productCategoryId
-    self.salesPersonId = salesPersonId
+    self.SKU = SKU
+    self.quantity = quantity
+    self.salesAmount = salesAmount
 
     
   def __str__(self):
-     return f'productCategoryId: {self.productCategoryId}, salesPersonId: {self.salesPersonId}';
-
+     return f'{self.date}, {self.customerId}, {self.transactionId}, {self.productCategoryId}, {self.SKU}, {self.quantity}, {self.salesAmount}';
+     
 constring: sa.engine.url.URL = sa.engine.URL.create(
     drivername="postgresql",
     username="postgres",
@@ -30,18 +35,23 @@ try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
         conn.execute("""SELECT * 
-                     FROM salesperson""")
+                     FROM transaction_data""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
         
         listOfTransactions = []
         
+        print ('date; customer_id; transaction_id; productCategoryId; SKU; quantity; sales_amount')
         for row in records:
             listOfTransactions.append(Transaction(
-           
-              productCategoryId= row[0],
-              salesPersonId= row[1]
+              date= row[0],
+              customerId= row[1],
+              transactionId= row[2],
+              productCategoryId= row[3],
+              SKU= row[4],
+              quantity= row[5],
+              salesAmount= row[6]
 
              
               
