@@ -36,9 +36,13 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT * 
-                     FROM transaction_data
-                     JOIN salesperson s ON transaction_data.product_category_id = s.product_category_id""")
+        conn.execute("""SELECT s.product_category_id, sum(sales_amount)
+                        FROM transaction_data
+                        JOIN salesperson s
+                        on transaction_data.product_category_id = s.product_category_id
+                        WHERE sales_person_id = 'Tarun Goodwin'
+                        GROUP BY s.product_category_id
+                        ORDER BY sum(sales_amount) DESC """)
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -47,7 +51,7 @@ try:
         
         
         
-        print ('date; customer_id; transaction_id; productCategoryId; SKU; quantity; sales_amount')
+        print ('product_category_id; sum(sales_amount)')
         for row in records:
             print(row)
             # listOfTransactions.append(Transaction(
