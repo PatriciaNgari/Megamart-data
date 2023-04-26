@@ -4,13 +4,13 @@ from io import open
 import pandas as pd
 
 class Transaction:
-  def __init__(self , productCategoryId, productCatName ):
+  def __init__(self , productCategoryId, salesPersonId ):
     self.productCategoryId = productCategoryId
-    self.productCatName = productCatName
+    self.salesPersonId = salesPersonId
 
     
   def __str__(self):
-     return f'productCategoryId: {self.productCategoryId}, productCatName: {self.productCatName}';
+     return f'productCategoryId: {self.productCategoryId}, salesPersonId: {self.salesPersonId}';
 
 constring: sa.engine.url.URL = sa.engine.URL.create(
     drivername="postgresql",
@@ -30,7 +30,7 @@ try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
         conn.execute("""SELECT * 
-                     FROM product""")
+                     FROM salesperson""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -41,7 +41,7 @@ try:
             listOfTransactions.append(Transaction(
            
               productCategoryId= row[0],
-              productCatName= row[1]
+              salesPersonId= row[1]
 
              
               
