@@ -3,8 +3,9 @@ import psycopg2
 from io import open
 import pandas as pd
 
+
 class Transaction:
-  def __init__(self , date, customerId, transactionId, productCategoryId, SKU, quantity, salesAmount ):
+  def __init__(self , date, customerId, transactionId, productCategoryId, SKU, quantity, salesAmount,salesPerson ):
     self.date = date
     self.customerId = customerId
     self.transactionId = transactionId
@@ -12,6 +13,7 @@ class Transaction:
     self.SKU = SKU
     self.quantity = quantity
     self.salesAmount = salesAmount
+    self.salesPerson = salesPerson
 
     
   def __str__(self):
@@ -35,27 +37,32 @@ try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
         conn.execute("""SELECT * 
-                     FROM transaction_data""")
+                     FROM transaction_data
+                     JOIN salesperson s ON transaction_data.product_category_id = s.product_category_id""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
         
         listOfTransactions = []
         
+        
+        
         print ('date; customer_id; transaction_id; productCategoryId; SKU; quantity; sales_amount')
         for row in records:
-            listOfTransactions.append(Transaction(
-              date= row[0],
-              customerId= row[1],
-              transactionId= row[2],
-              productCategoryId= row[3],
-              SKU= row[4],
-              quantity= row[5],
-              salesAmount= row[6]
+            print(row)
+            # listOfTransactions.append(Transaction(
+            #   date= row[0],
+            #   customerId= row[1],
+            #   transactionId= row[2],
+            #   productCategoryId= row[3],
+            #   SKU= row[4],
+            #   quantity= row[5],
+            #   salesAmount= row[6]
+              
 
              
               
-             ))
+            #  ))
 
         for transaction in listOfTransactions:
             print(str(transaction))         
