@@ -2,6 +2,7 @@ import sqlalchemy as sa
 import psycopg2
 from io import open
 import pandas as pd
+import csv
 
 
 class Transaction:
@@ -36,41 +37,29 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT s.product_category_id, sum(sales_amount)
+        conn.execute("""SELECT product_cat_name, sum(sales_amount)
                         FROM transaction_data
-                        JOIN salesperson s
-                        on transaction_data.product_category_id = s.product_category_id
-                        WHERE sales_person_id = 'Tarun Goodwin'
-                        GROUP BY s.product_category_id
-                        ORDER BY sum(sales_amount) DESC """)
+                        JOIN product p on transaction_data.product_category_id = p.product_category_id
+                        GROUP BY product_cat_name
+                        ORDER BY sum(sales_amount)DESC""")
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
         
         listOfTransactions = []
         
+        # 1. Open a new CSV file
+        with open('sales_per_product.csv', 'w', newline='') as file:
+        # 2. Create a CSV writer
+         writer = csv.writer(file)
+        # 3. Write data to the file
         
-        
-        print ('product_category_id; sum(sales_amount)')
-        for row in records:
-            print(row)
-            # listOfTransactions.append(Transaction(
-            #   date= row[0],
-            #   customerId= row[1],
-            #   transactionId= row[2],
-            #   productCategoryId= row[3],
-            #   SKU= row[4],
-            #   quantity= row[5],
-            #   salesAmount= row[6]
-              
+         sales_per_product_header = ['product_cat_name', 'sum(sales_amount)']
+         writer.writerow(sales_per_product_header)
+         for row in records:
+            writer.writerow([row[0], row[1]])
 
-             
-              
-            #  ))
-
-        for transaction in listOfTransactions:
-            print(str(transaction))         
-            
+                             
         print("Engine valid")
 except Exception as e:
     print(f"Engine invalid: {e}")
