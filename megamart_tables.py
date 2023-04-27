@@ -37,12 +37,27 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT p.product_category_id, p.product_cat_name, s.sales_person_id, COUNT(quantity) AS qty_sold, sum(sales_amount) AS revenue
+        conn.execute("""SELECT count(quantity), sum(sales_amount),
+                            CASE
+                                WHEN date >= '2020-01-01' AND date <= '2020-01-31' THEN 'january'
+                                WHEN date >= '2020-02-01' AND date <= '2020-02-29' THEN 'february'
+                                WHEN date >= '2020-03-01' AND date <= '2020-03-31' THEN 'march'
+                                WHEN date >= '2020-04-01' AND date <= '2020-04-30' THEN 'april'
+                                WHEN date >= '2020-05-01' AND date <= '2020-05-31' THEN 'may'
+                                WHEN date >= '2020-06-01' AND date <= '2020-06-30' THEN 'june'
+                                WHEN date >= '2020-07-01' AND date <= '2020-07-31' THEN 'july'
+                                WHEN date >= '2020-08-01' AND date <= '2020-08-31' THEN 'august'
+                                WHEN date >= '2020-09-01' AND date <= '2020-09-30' THEN 'september'
+                                WHEN date >= '2020-10-01' AND date <= '2020-10-31' THEN 'october'
+                                WHEN date >= '2020-11-01' AND date <= '2020-11-30' THEN 'november'
+                                WHEN date >= '2020-12-01' AND date <= '2020-12-31' THEN 'december'
+                                ELSE 'others'
+                                END AS monthly_sales
                         FROM transaction_data
-                        JOIN product p on transaction_data.product_category_id = p.product_category_id
-                        JOIN salesperson s on transaction_data.product_category_id = s.product_category_id
-                        GROUP BY p.product_category_id, product_cat_name, sales_person_id
-                        order by count(quantity)desc""")
+                        COUNT(date)
+                        GROUP BY monthly_sales
+
+                                            """)
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -50,15 +65,15 @@ try:
         listOfTransactions = []
         
         # 1. Open a new CSV file
-        with open('total_sales_per_product.csv', 'w', newline='') as file:
+        with open('monthly_sales.csv', 'w', newline='') as file:
         # 2. Create a CSV writer
          writer = csv.writer(file)
         # 3. Write data to the file
         
-         total_sales_per_product_header = ['product_category_id', 'product_cat_name', 'sales_person_id', 'qty_sold', 'revenue']
-         writer.writerow(total_sales_per_product_header)
+         monthly_sales_header = ['quantity_sold', 'total_sales', 'month']
+         writer.writerow(monthly_sales_header)
          for row in records:
-            writer.writerow([row[0], row[1], row[2], row[3], row[4]])
+            writer.writerow([row[0], row[1], row[2]])
 
                              
         print("Engine valid")
