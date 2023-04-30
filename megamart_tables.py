@@ -37,12 +37,14 @@ dbEngine= sa.create_engine(
 try:
     with  psycopg2.connect("dbname=Megamart_Data user=postgres") as cur:
         conn = cur.cursor()
-        conn.execute("""SELECT p.product_category_id, product_cat_name, sales_person_id, count(quantity) as qty_sold, sum(sales_amount) as revenue
-                        FROM transaction_data
-                        JOIN product p on transaction_data.product_category_id = p.product_category_id
-                        JOIN salesperson s on p.product_category_id = s.product_category_id
-                        GROUP BY p.product_category_id, product_cat_name, sales_person_id
-                        ORDER BY sum(sales_amount)desc""")
+        conn.execute("""with product_revenue as (
+                            select product_category_id, sum(sales_amount) as revenue
+                            from transaction_data
+                            group by product_category_id )
+                        select product_category_id,
+                                revenue * 100 / sum(revenue) over ()as revenue_percentage
+                        from product_revenue
+                        order by revenue_percentage desc """)
         records = conn.fetchall();
 
         print("Print each row and it's columns values")
@@ -50,15 +52,15 @@ try:
         listOfTransactions = []
         
         # 1. Open a new CSV file
-        with open('total_sales_per_product.csv', 'w', newline='') as file:
+        with open('percentage_revenue_per_product.csv', 'w', newline='') as file:
         # 2. Create a CSV writer
          writer = csv.writer(file)
         # 3. Write data to the file
         
-         total_sales_per_product_header = ['product_category_id', 'product_cat_name', 'sales_person_id', 'qty_sold', 'revenue']
-         writer.writerow(total_sales_per_product_header)
+         percentage_revenue_per_product_header = ['product_category_id', 'revenue_percentage']
+         writer.writerow(percentage_revenue_per_product_header)
          for row in records:
-            writer.writerow([row[0], row[1], row[2], row[3], row[4]])
+            writer.writerow([row[0], row[1]])
 
                              
         print("Engine valid")
